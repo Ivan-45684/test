@@ -1,0 +1,144 @@
+<body>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">10 / 100000</div>
+  <img src="https://tullusus.pluton-host.ru/wp-content/themes/myinvestitsia/okmonety_1.png" alt="Один" style="width:640px; height: 230px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">100 / 100000</div>
+  <img src="https://tullusus.pluton-host.ru/wp-content/themes/myinvestitsia/okmonety_02.png" alt="Два" style="width:640px; height: 230px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">1000 / 100000</div>
+  <img src="https://tullusus.pluton-host.ru/wp-content/themes/myinvestitsia/okmonety_3.png" alt="Три" style="width:640px;
+  height: 230px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">10000 / 100000</div>
+  <img src="https://tullusus.pluton-host.ru/wp-content/themes/myinvestitsia/okmonety_4.png" alt="Четыре" style="width:640px; height: 230px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">100000 / 100000</div>
+  <img src="https://tullusus.pluton-host.ru/wp-content/themes/myinvestitsia/okmonetyfinish.png" alt="Пять" style="width:640px;
+  height: 230px">
+  <div class="text"></div>
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 1000); // Меняйте изображение каждые 2 секунды
+}
+</script>
+</html>
+	<style>
+   .rightpic {
+    float: right; /* Выравнивание по правому краю */
+    margin:1px; /* Отступы вокруг фотографии */
+   }
+   table {
+            width: 300px;
+            margin: 10px;
+            height: 50px;
+            }
+  </style>
+    <div class="Email">
+        <p><img src="https://tullusus.pluton-host.ru/wp-content/themes/myinvestitsia/to_take_monety.png" alt="Иллюстрация"
+				width="180px" height="230px" class="rightpic">     
+        <table style="float: right;">
+          <tr>
+            <td>
+              <p>
+                Почта: vanikapo01@gmail.com
+              </p>
+              <a>ВК:</a>
+                <a id="mycontacts" href="https://vk.com/vanikapo24">
+                  https://vk.com/vanikapo24
+                </a>
+            </td>
+          </tr>
+        </table> 
+        </p>
+    </div>
+    <?php wp_footer(); ?>
+          <div class="inform_text" id="informatsia">
+                <p>Информация на данном сайте не является финансовой рекомендацией, мы лишь делимся своим опытом и взглядами. За свои деньги и сохранность своих сбережений ответственность несёте вы сами!</p>
+          </div>
+   
+   <!-- Put this div tag to the place, where the Comments block will be -->
+   <div id="vk_comments"></div>
+   <script type="text/javascript">
+        VK.Widgets.Comments("vk_comments", {limit: 15, attach: "*"});
+   </script>
+
+   <p><a target="blank" href="https://vk.com/club227013483"><img src="https://tullusus.pluton-host.ru/wp-content/themes/myinvestitsia/vk_iconka.png" width="33"  
+   height="33" style="margin-top: 40px; margin-left: 15px;" alt=""></a></p>     
+
+   <div class="btn-up btn-up_hide"></div>
+   <script>
+    const btnUp = {
+      el: document.querySelector('.btn-up'),
+      show() {
+        // удалим у кнопки класс btn-up_hide
+        this.el.classList.remove('btn-up_hide');
+      },
+      hide() {
+        // добавим к кнопке класс btn-up_hide
+        this.el.classList.add('btn-up_hide');
+      },
+      addEventListener() {
+        // при прокрутке содержимого страницы
+        window.addEventListener('scroll', () => {
+          // определяем величину прокрутки
+          const scrollY = window.scrollY || document.documentElement.scrollTop;
+          // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
+          scrollY > 400 ? this.show() : this.hide();
+        });
+        // при нажатии на кнопку .btn-up
+        document.querySelector('.btn-up').onclick = () => {
+          // переместим в начало страницы
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+         }
+        }
+       }
+      btnUp.addEventListener();
+    </script>
+ </body>
